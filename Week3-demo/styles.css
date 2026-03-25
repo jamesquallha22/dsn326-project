@@ -10,11 +10,13 @@ div {
     font-size: 20px;
 }
 
+/* Creates a parent flex container to hold children */
 .flex-container {
     display: flex;
     background-color: rgb(255, 167, 35);
     border-radius: 10px; 
 }
+/* Creates a child for the flex container with alignment parameters */
 .flex-container div {
     background-color: #1d1d1d;
     padding: 40px;
@@ -22,16 +24,19 @@ div {
     padding-bottom: 60px;
     margin: 20px;
     text-align: center;
-    flex: 1;
     border-radius: 10px;
+    /* sets flexible length of children to be the same length */
+    flex: 1;
 }
 
+/* Creates a parent grid container to hold children */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     background-color: rgb(52, 174, 255);
     border-radius: 10px; 
 }
+/* Creates a child for the flex container with alignment parameters */
 .grid-item {
     background-color: #1d1d1d;
     padding: 40px;
