@@ -1,0 +1,41 @@
+h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #1d1d1d;
+}
+div {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    text-wrap: nowrap;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    background-color: rgb(255, 167, 35);
+    border-radius: 10px; 
+}
+.flex-container div {
+    background-color: #1d1d1d;
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 20px;
+    text-align: center;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(52, 174, 255);
+    border-radius: 10px; 
+}
+.grid-item {
+    background-color: #1d1d1d;
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
