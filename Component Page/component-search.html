@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Component</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+<main>
+<nav class="navigation-bar">
+    <img src="logo-full.png" alt="Logo-full" class="logo-full">
+    <ul class="navigation-bar-options">
+        <li><a href="component-typography.html">Text</a></li>
+        <li><a href="component-button.html">Buttons</a></li>
+        <li><a href="component-search.html">Search Bar</a></li>
+        <li><a href="component-cards.html">Cards</a></li>
+        <li><a href="component-navigation-bar.html">Navigation Bar</a></li>
+    </ul>
+</nav>
+
+    <div class="primary-title">
+        <p>Search Bar Component</p>
+    </div>
+
+    <div class="primary-subtitle">
+        <p>Default</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button"></button>
+    </div>
+    <div class="primary-note">
+        <p>Standard search bar appearance (try me).</p>
+    </div>
+
+    <div class="primary-subtitle">
+        <p>Typing</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search..." style="border-color: var(--color-blue-0);">
+        <button class="search-button"></button>
+    </div>
+    <div class="primary-note">
+        <p>Input field given blue border while typing.</p>
+    </div>
+
+    <div class="primary-subtitle">
+        <p>Search Button Hovered</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search..." style="border-color: var(--color-blue-0);">
+        <button class="search-button" style="background-color: var(--button-primary-color-hover);"></button>
+    </div>
+    <div class="primary-note">
+        <p>Search button blue when hovered.</p>
+    </div>
+
+    <div class="primary-subtitle">
+        <p>Search Button Clicked</p>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button" style="background-color: var(--button-primary-color-select); color: var(--text-highlight-color); border: 1px solid var(--color-neutral-400);"></button>
+    </div>
+    <div class="primary-note">
+        <p>Search button turns white with thin black boarder when pressed.</p>
+    </div>
+
+</main>
+
+<aside>
+    <div class="primary-title">
+        <p>CSS Code</p>
+    </div>
+    <pre class="css-code">
+.search-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-bar {
+  flex: 1;
+  padding: var(--spacing-medium);
+  font-size: var(--text-description);
+  font-family: var(--font-family, inherit);
+  color: var(--text-primary-color);
+  background-color: var(--color-neutral-0);
+  border: 1px solid var(--color-neutral-400);
+  border-right: none;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--color-blue-0);
+}
+
+.search-button {
+  width: var(--grid-spacing-large);
+  height: var(--grid-spacing-large);
+  padding: var(--spacing-medium);
+  background-image: url(search.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  background-color: var(--button-primary-color);
+}
+
+.search-button:hover {
+  background-color: var(--button-primary-color-hover);
+  transition: all 0.3s ease;
+}
+
+.search-button:active {
+  background-color: var(--button-primary-color-select);
+  color: var(--text-highlight-color);
+  transition: all 0.1s ease;
+  border: 1px solid var(--color-neutral-400);
+}</pre>
+</aside>
+</div>
+</body>
+</html>
