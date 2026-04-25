@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Llama - Typography</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="navigation.js" defer></script>
+</head>
+<body>
+<div class="page-wrapper">
+<main>
+<!-- Desktop Menu -->
+<nav class="navigation-bar">
+    <img src="logo-full.png" alt="Logo-full" class="logo-full">
+    <ul class="navigation-bar-options">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="foundation-guidelines.html">Foundation Guidelines</a></li>
+        <li><a href="component-guidelines.html">Component Guidelines</a></li>
+        <li><a href="component-typography.html">Text</a></li>
+        <li><a href="component-button.html">Buttons</a></li>
+        <li><a href="component-search.html">Search Bar</a></li>
+        <li><a href="component-cards.html">Cards</a></li>
+        <li><a href="component-navigation.html">Navigation</a></li>
+    </ul>
+</nav>
+
+<!-- Dropdown Menu -->
+<nav class="navigation-responsive">
+    <img src="logo-full.png" alt="Logo-full" class="logo-full">
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+    </button>
+    <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="foundation-guidelines.html">Foundation Guidelines</a></li>
+        <li><a href="component-guidelines.html">Component Guidelines</a></li>
+        <li><a href="component-typography.html">Text</a></li>
+        <li><a href="component-button.html">Buttons</a></li>
+        <li><a href="component-search.html">Search Bar</a></li>
+        <li><a href="component-cards.html">Cards</a></li>
+        <li><a href="component-navigation.html">Navigation</a></li>
+    </ul>
+</nav>
+    <div class="primary-title">
+        <p>Typography</p>
+    </div>
+    <br>
+    
+        <div class="primary-title">
+            <p>Primary Title (used for titles and labels)</p>
+        </div>
+    </div>
+        <div class="primary-subtitle">
+            <p>Primary Subtitle (used for subtitles)</p>
+        </div>
+    </div>
+        <div class="primary-description">
+            <p>Primary Description (used for long-form text)</p>
+        </div>
+    </div>
+        <div class="primary-note">
+            <p>Primary Note (used for additional information)</p>
+        </div>
+    </div>
+        <div class="secondary-title">
+            <p>Secondary Title (all used at bottom of page)</p>
+        </div>
+    </div>
+        <div class="secondary-subtitle">
+            <p>Secondary Subtitle</p>
+        </div>
+    </div>
+        <div class="secondary-description">
+            <p>Secondary Description</p>
+        </div>
+    </div>
+        <div class="secondary-note">
+            <p>Secondary Note</p>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<aside>
+    <div class="primary-title">
+        <p>CSS Code</p>
+    </div>
+    <pre class="css-code">
+/* primary text variants */
+.primary-title {
+  font-size: var(--text-large);
+  color: var(--text-primary-color);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-large);
+}
+.primary-subtitle {
+  font-size: var(--text-medium);
+  color: var(--text-primary-color);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-medium);
+}
+.primary-description {
+  font-size: var(--text-description);
+  color: var(--text-primary-color);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-description);
+}
+.primary-note {
+  font-size: var(--text-small);
+  color: var(--text-secondary-color);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-small);
+}
+
+.primary-[variant]:hover {
+  color: var(--text-primary-color-hover);
+  transition: all 0.3s ease;
+}
+
+/* secondary text variants */
+.secondary-title {
+  background-color: var(--color-neutral-1000);
+  display: block;
+  padding: var(--spacing-small);
+  font-size: var(--text-large);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary-color);
+  line-height: var(--line-height-large);
+  margin: 0;
+}
+.secondary-subtitle {
+  background-color: var(--color-neutral-1000);
+  display: block;
+  padding: var(--spacing-small);
+  font-size: var(--text-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary-color);
+  line-height: var(--line-height-medium);
+  margin: 0;
+}
+.secondary-description {
+  background-color: var(--color-neutral-1000);
+  display: block;
+  padding: var(--spacing-small);
+  font-size: var(--text-description);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary-color);
+  line-height: var(--line-height-description);
+  margin: 0;
+}
+.secondary-note {
+  background-color: var(--color-neutral-1000);
+  display: block;
+  padding: var(--spacing-small);
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary-color);
+  line-height: var(--line-height-small);
+  margin: 0;
+}
+
+.secondary-[variant]:hover {
+  color: var(--text-secondary-color-hover);
+  transition: all 0.3s ease;
+}
+</pre>
+</aside>
+</div>
+</body>
+</html>

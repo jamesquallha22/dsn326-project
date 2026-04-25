@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Llama - Cards</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="navigation.js" defer></script>
+</head>
+<body>
+<div class="page-wrapper">
+<!-- Desktop Menu -->
+<nav class="navigation-bar">
+    <img src="logo-full.png" alt="Logo-full" class="logo-full">
+    <ul class="navigation-bar-options">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="foundation-guidelines.html">Foundation Guidelines</a></li>
+        <li><a href="component-guidelines.html">Component Guidelines</a></li>
+        <li><a href="component-typography.html">Text</a></li>
+        <li><a href="component-button.html">Buttons</a></li>
+        <li><a href="component-search.html">Search Bar</a></li>
+        <li><a href="component-cards.html">Cards</a></li>
+        <li><a href="component-navigation.html">Navigation</a></li>
+    </ul>
+</nav>
+
+<!-- Dropdown Menu -->
+<nav class="navigation-responsive">
+    <img src="logo-full.png" alt="Logo-full" class="logo-full">
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+    </button>
+    <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="foundation-guidelines.html">Foundation Guidelines</a></li>
+        <li><a href="component-guidelines.html">Component Guidelines</a></li>
+        <li><a href="component-typography.html">Text</a></li>
+        <li><a href="component-button.html">Buttons</a></li>
+        <li><a href="component-search.html">Search Bar</a></li>
+        <li><a href="component-cards.html">Cards</a></li>
+        <li><a href="component-navigation.html">Navigation</a></li>
+    </ul>
+</nav>
+    <div class="primary-title">
+        <p>Home Page Card</p>
+    </div>
+    <div class="primary-subtitle">
+        <p>Default State</p>
+    </div>
+<div class="home-page-grid">
+    <div class="home-page-card">
+        <img src="example.png" alt="Example Image 1">
+        <div class="home-card-text">
+            <h1>Prompt#123456</h1>
+            <p>Category: AI Model 1, AI Model 2</p>
+            <h1>-></h1>
+        </div>
+    </div>
+    <div class="home-page-card" style="opacity: 1;">
+        <img src="example.png" alt="Example Image 1">
+        <div class="home-card-text" style="opacity: 1;" >
+            <h1>Prompt#123456</h1>
+            <p>Category: AI Model 1, AI Model 2</p>
+            <h1>-></h1>
+        </div>
+    </div>
+</main>
+<div class="primary-title">
+        <p>Results Page Card</p>
+    </div>
+        <div class="primary-subtitle">
+        <p>Default State</p>
+    </div>
+</div class="results-page-list">  
+    <div class="results-page-card">
+        <img src="example.png" alt="Example Image 7">
+        <div class="card-content">
+            <h1>Prompt#123456</h1>
+            <p>This is an example of text that is being used to 
+                generate the image prompt. The text is very long 
+                so it shows how the text adapts to the changing of 
+                the size of the element. This should hopefully give 
+                a good idea of how different screens will format 
+                this component.</p>
+        </div>
+    </div>
+        <div class="results-page-card">
+        <img src="example.png" alt="Example Image 8">
+        <div class="card-content">
+            <h1>Prompt#789012</h1>
+            <p>This is an example of text that is being used to 
+                generate the image prompt. The text is very long 
+                so it shows how the text adapts to the changing of 
+                the size of the element. This should hopefully give 
+                a good idea of how different screens will format 
+                this component.</p>
+        </div>
+    </div>
+
+
+<aside>
+    <div class="primary-title">
+        <p>CSS Code</p>
+    </div>
+    <pre class="css-code">
+/* --HOME PAGE CARD-- */
+
+/* home page card main container */
+.home-page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
+
+/* home page card image */
+.home-page-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-page-card:active {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(tint-blue.png);
+  background-size: cover;
+}
+/* home page card overlay */
+.home-page-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(tint-blue.png);
+  background-size: cover;
+  /* makes blue tint invisible by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+  /* blue tint appears on hover using ::before properties */
+.home-page-card:hover::before {
+  opacity: 1;
+}
+
+/* home page card text */
+.home-card-text {
+  /* centers text towards middle of image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: var(--grid-spacing-large);
+  justify-content: center;
+  color: var(--text-secondary-color-hover);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* home page card "Prompt#" text */
+.home-card-text h1 {
+  font-size: var(--text-large);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-large);
+  margin: 0;
+}
+
+/* home page card "AI models" text */
+.home-card-text p {
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-small);
+  margin: 0;
+}
+
+/* reveals card-text on hover */
+.home-page-card:hover .home-card-text {
+  opacity: 1;
+}
+
+/* arranges home page cards into grid */
+.home-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--grid-spacing-medium);
+}
+
+/* --RESULTS PAGE CARD-- */
+
+/* main container for all resultscards */
+.results-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-spacing-medium);
+}
+
+/* individual card container */
+.results-page-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: var(--spacing-medium);
+  position: relative;
+}
+
+/* image stylings */
+.results-page-card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* blue tint hover effect */
+.results-page-card::before {
+  /* white arrow */
+  text-indent: var(--spacing-small);
+  content: "->";
+  color: var(--text-secondary-color-hover);
+  font-size: var(--text-large);
+
+
+  /* match blue tint to position of image */
+  background-image: url(tint-blue.png);
+  background-size: cover;
+  position: absolute;
+  left: var(--spacing-medium);
+  width: 300px;
+  height: 300px;
+  /* blue tint invisible by default */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+/* reveal blue tint on hover */
+.results-page-card:hover::before {
+  opacity: 1;
+}
+
+/* text positioning */
+.results-page-card .card-content {
+  margin-left: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* prompt number */
+.results-page-card .card-content h1 {
+  font-size: var(--text-large);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary-color);
+  margin: 0;
+  line-height: var(--line-height-large);
+}
+/* prompt number hover effect */
+.results-page-card .card-content h1:hover {
+  color: var(--text-primary-color-hover);
+  transition: all 0.3s ease;
+}
+/* description text */
+.results-page-card .card-content p {
+  font-size: var(--text-description);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary-color);
+  margin: 0;
+  line-height: var(--line-height-description);
+}
+</pre>
+</aside>
+</div>
+</body>
+</html>
